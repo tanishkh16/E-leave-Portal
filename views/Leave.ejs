@@ -1,0 +1,25 @@
+<main>
+   
+    <link rel="stylesheet" href="Machine.css">
+  ]
+    <div class="cont">
+        <h2 class="head">Leaving Form</h2>
+
+        <form action="/submitleave" method="post">
+           
+            <input type="text" id="name" name="name"  placeholder="Name" required>
+            <input type="number" id="roll" name="roll"  placeholder="Roll No." required>
+            <input type="number" id="room" name="room"  placeholder="Rooom No." required>
+            <input type="text" id="Hostel" name="hostel" placeholder="Hostel" required>
+            <input type="text" id="departure" name="departure" placeholder="Enter departure date" required>
+            <input type="text" id="arrival" name="arrival"  placeholder="Enter arrival date" required>
+            <input type="number" id="days" name="days"  placeholder="No of days out of campus" required>
+            <input type="text" id="address" name="address"  placeholder="Address" required>
+            <input type="number" id="parents" name="parents" placeholder="Parents Number" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <%- include('sidebar.ejs')%>
+    <main>
+

@@ -1,0 +1,16 @@
+<main>
+    <link rel="stylesheet" href="submission.css">
+    <form action="/submission" method="get">
+        <div class="sumbit">
+<h1 class="sub" style="font-family: 'Montserrat', sans-serif;">Your form is submitted successfully</h1>
+<% if(locals.Leaves){ %>
+    <% var num=Leaves.length %>
+    <% console.log(Leaves.length); %>
+    <h3 class="subm" style="font-family: 'Montserrat', sans-serif;">Your Form No. is <%= Leaves.length %></h3>
+<% } %>
+<!-- <h3 class="h1" style="font-family: 'Montserrat', sans-serif;">To check Your Form Status Click Below</h3> -->
+<!-- <a href="/mStatus" class="button" role="button" style="font-family: 'Montserrat', sans-serif;">Track Status</a> -->
+</div>
+</form>
+<%- include('sidebar.ejs')%>
+<main>

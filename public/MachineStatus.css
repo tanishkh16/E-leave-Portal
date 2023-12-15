@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+/* Define variables */
+:root {
+  --base-spacing-unit: 24px;
+  --half-spacing-unit: calc(var(--base-spacing-unit) / 2);
+  --color-alpha: #1772FF;
+  --color-form-highlight: #EEEEEE;
+}
+.machineStatusheading{
+    font-size: 40px;
+    text-align: center;
+    margin-left: 250px;
+    margin-top: 13px;
+
+}
+
+/* Apply box-sizing to all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  padding: var(--base-spacing-unit);
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+/* Reset margins for headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Container styles */
+.container {
+  max-width: 1000px;
+  margin-right: auto;
+  /* margin-top: -50px; */
+  margin-left: 345px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 8vh;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border: 1px solid var(--color-form-highlight);
+}
+
+/* Table header styles */
+.table-header {
+  display: flex;
+  width: 100%;
+  background: #000;
+  padding: calc(var(--half-spacing-unit) * 1.5) 0;
+}
+
+/* Table row styles */
+.table-row {
+  display: flex;
+  width: 100%;
+  padding: calc(var(--half-spacing-unit) * 1.5) 0;
+}
+
+/* Odd table rows */
+.table-row:nth-of-type(odd) {
+  background: var(--color-form-highlight);
+}
+
+/* Table data and header item styles */
+.table-data, .header_item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+/* Header item text transformation */
+.header_item {
+  text-transform: uppercase;
+}
+
+/* Filter link styles */
+.filter_link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-left: var(--base-spacing-unit);
+  padding-right: var(--base-spacing-unit);
+}
+
+/* Filter link pseudo-element */
+.filter__link::after {
+  content: '';
+  position: absolute;
+  right: calc(-1 * var(--half-spacing-unit) * 1.5);
+  color: white;
+}

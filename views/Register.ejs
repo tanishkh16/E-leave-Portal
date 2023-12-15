@@ -1,0 +1,37 @@
+<main>	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Login Form Using HTML And CSS Only</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="form-container log-in-container">
+			<form  class="form" action="/register" method="POST">
+				<h1 style="font-family: 'Montserrat', sans-serif;">Sign Up</h1>
+				
+				<input type="text" placeholder="Name" name="username" autocomplete="off" required/>
+                <input type="number" placeholder="Roll No." name="roll" autocomplete="off"/>
+                <input type="email" placeholder="Email" name="email" autocomplete="off" required/>
+                <input type="password" placeholder="Password" name="password" autocomplete="off" required/>
+                <input type="number" placeholder="Mobile No." name="mobile" autocomplete="off" required />
+
+			
+				<button type="submit" class="button" style="font-family: 'Montserrat', sans-serif;">Sign Up</button>
+                <!-- <a class="button" href="/register" role="button">SignUp</a> -->
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Already Signed Up?</h1>
+                    <br>
+                    <br>
+                    <!-- <form type="/login" method="get">
+                        <button type="submit"  >Login</button>
+                    </form> -->
+                    <a class="button" href="/" role="button">Login</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<main>

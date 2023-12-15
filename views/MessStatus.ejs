@@ -1,0 +1,35 @@
+<main>
+    <link rel="stylesheet" href="MachineStatus.css">
+    <p class="machineStatusheading"style="font-family: 'Montserrat', sans-serif;">Track Status</p>
+   <div class="container">
+       
+       <div class="table">
+           <div class="table-header">
+               <div class="header_item"><a id="name" class="filter_link" style="font-family: 'Montserrat', sans-serif;">Name</a></div>
+               <div class="header_item"><a id="roll" class="filter_link filter_link--number" style="font-family: 'Montserrat', sans-serif;">Roll No.</a></div>
+               <div class="header_item"><a id="room" class="filter_link filter_link--number" style="font-family: 'Montserrat', sans-serif;">Room No.</a></div>
+               <div class="header_item"><a id="time" class="filter_link filter_link--number" style="font-family: 'Montserrat', sans-serif;">Complain</a></div>
+               
+           </div>
+           <%if(locals.complaint){%> 
+               <% complaint.forEach((d)=>{%>
+                   <div class="table-content">	
+                       <div class="table-row">		
+                           <div class="table-data"style="font-family: 'Montserrat', sans-serif;"><%=d.name%></div>
+                           <div class="table-data"style="font-family: 'Montserrat', sans-serif;"><%=d.roll%></div>
+                           <div class="table-data"style="font-family: 'Montserrat', sans-serif;"> <%=d.room%></div>
+                           <div class="table-data"style="font-family: 'Montserrat', sans-serif;"> <%=d.complaint%></div>
+                           
+                       </div>
+                   </div>	
+               <% }) %>
+              <%}else{%>
+               <h1>No Entry</h1>
+               <%}%>
+       </div>
+   </div>
+   <%- include('sidebar.ejs')%>
+   </main>
+   </body>
+   </html>
+   

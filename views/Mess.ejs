@@ -1,0 +1,51 @@
+<!-- 
+<main>
+   
+    <link rel="stylesheet" href="Machine.css">
+   
+    <div class="cont">
+        <h2 class="head">Booking Form</h2>
+
+        <form action="/submit" method="post">
+           
+            <input type="text" id="name" name="name"  placeholder="Name" required>
+            <input type="number" id="roll" name="roll"  placeholder="Roll No." required>
+            <input type="number" id="room" name="room"  placeholder="Rooom No." required>
+            <input type="text" id="Hostel" name="hostel" placeholder="Hostel" required>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <%- include('hostel.ejs')%>
+    </main>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</main>
+</body>
+</html>
+ -->
+
+ 
+<main>
+   
+    <link rel="stylesheet" href="Machine.css">
+    
+    <div class="container">
+        <h2 class="head" style="font-family: 'Montserrat', sans-serif;">Complaint Form</h2>
+
+        <form action="/submitmess" method="post">
+           
+            <input type="text" id="name" name="name"  placeholder="Name" required>
+            <input type="number" id="roll" name="roll"  placeholder="Roll No." required>
+            <input type="number" id="room" name="room"  placeholder="Rooom No." required>
+            <input type="text" id="time" name="mess" placeholder="Mess" required>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="complain" rows="10" cols="50" style="resize:none" placeholder=" Write your Complaints..."></textarea>
+            <button type="submit" class="butt" style="font-family: 'Montserrat', sans-serif;">Submit</button>
+        </form>
+    </div>
+
+    <%- include('sidebar.ejs')%>
+    </main>
+</body>
+</html>

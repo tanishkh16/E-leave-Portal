@@ -1,0 +1,33 @@
+<main>
+    <link rel="stylesheet" href="MachineStatus.css">
+    <p class="machineStatusheading">Track Status</p>
+   <div class="container">
+       
+       <div class="table" style="font-family: 'Montserrat', sans-serif;">
+           <div class="table-header" >
+               <div class="header_item"><a id="name" class="filter_link" >Name</a></div>
+               <div class="header_item"><a id="roll" class="filter_link filter_link--number" >Roll No.</a></div>
+               <div class="header_item"><a id="room" class="filter_link filter_link--number" >Room No.</a></div>
+               <div class="header_item"><a id="time" class="filter_link filter_link--number" >Complaint</a></div>
+           </div>
+           <%if(locals.complain){%> 
+               <% complain.forEach((d)=>{%>
+                   <div class="table-content">	
+                       <div class="table-row">		
+                           <div class="table-data"><%=d.name%></div>
+                           <div class="table-data"><%=d.roll%></div>
+                           <div class="table-data"> <%=d.room%></div>
+                           <div class="table-data"> <%=d.complain%></div>
+                       </div>
+                   </div>	
+               <% }) %>
+              <%}else{%>
+               <h1>No Entry</h1>
+               <%}%>
+       </div>
+   </div>
+   <%- include('sidebar.ejs')%>
+   </main>
+   </body>
+   </html>
+   

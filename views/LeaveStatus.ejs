@@ -1,0 +1,36 @@
+<main>
+    <link rel="stylesheet" href="LeaveStatus.css">
+    <link rel="stylesheet" href="MachineStatus.css">
+    <p class="leaveStatusheading">Track Record of Applied Leave</p>
+    <div class="contai">
+    <form action="leaverecord" method="post">
+        <input type="text" id="leave" name="leave"  placeholder="Enter Your RollNo." required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<%if(locals.Leaves){%> 
+    <% console.log(Leaves); %>
+<div class="container">
+    <div class="table">
+        <div class="table-header">
+            <div class="header_item"><a id="name" class="filter_link" style="font-family: 'Montserrat', sans-serif;">Name</a></div>
+            <div class="header_item"><a id="roll" class="filter_link filter_link--number" style="font-family: 'Montserrat', sans-serif;">Roll No.</a></div>
+            <div class="header_item"><a id="room" class="filter_link filter_link--number"style="font-family: 'Montserrat', sans-serif;" >Status</a></div>
+        </div>
+                <div class="table-content">	
+                    <div class="table-row">		
+                        <div class="table-data"><%=Leaves.name%></div>
+                        <div class="table-data"><%=Leaves.roll%></div>
+                        <div class="table-data"style="font-family: 'Montserrat', sans-serif;">Pending</div>
+                    </div>
+                </div>	
+            <% }else{ %>
+                <!-- <p class="leaveStatusheading" style="font-family: 'Montserrat', sans-serif;">No Record Found!!</p> -->
+                <% } %>
+    </div>
+    </div>
+   <%- include('sidebar.ejs')%>
+   </main>
+   </body>
+   </html>

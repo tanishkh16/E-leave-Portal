@@ -1,0 +1,35 @@
+<main>
+    <link rel="stylesheet" href="MachineStatus.css">
+    <p class="machineStatusheading">Track Record of Washing Machine</p>
+   <div class="container">
+       
+       <div class="table">
+           <div class="table-header">
+               <div class="header_item"><a id="name" class="filter_link" >Name</a></div>
+               <div class="header_item"><a id="roll" class="filter_link filter_link--number" style="font-family: 'Montserrat', sans-serif;">Roll No.</a></div>
+               <div class="header_item"><a id="room" class="filter_link filter_link--number" style="font-family: 'Montserrat', sans-serif;">Room No.</a></div>
+               <div class="header_item"><a id="time" class="filter_link filter_link--number" style="font-family: 'Montserrat', sans-serif;">Time(in mins)</a></div>
+               <div class="header_item"><a id="mobile" class="filter_link filter_link--number"style="font-family: 'Montserrat', sans-serif;" >Mobile No.</a></div>
+           </div>
+           <%if(booking){%> 
+               <% booking.forEach((d)=>{%>
+                   <div class="table-content">	
+                       <div class="table-row">		
+                           <div class="table-data" style="font-family: 'Montserrat', sans-serif;"><%=d.name%></div>
+                           <div class="table-data" style="font-family: 'Montserrat', sans-serif;"><%=d.roll%></div>
+                           <div class="table-data" style="font-family: 'Montserrat', sans-serif;"> <%=d.room%></div>
+                           <div class="table-data" style="font-family: 'Montserrat', sans-serif;"> <%=d.removalTime%></div>
+                           <div class="table-data" style="font-family: 'Montserrat', sans-serif;"> <%=d.phone%></div>
+                       </div>
+                   </div>	
+               <% }) %>
+              <%}else{%>
+               <h1 style="font-family: 'Montserrat', sans-serif;">No Entry</h1>
+               <%}%>
+       </div>
+   </div>
+   <%- include('sidebar.ejs')%>
+   </main>
+   </body>
+   </html>
+   
